@@ -1,0 +1,204 @@
+2024-05-26 23:56:40,853 - URBasic_realTimeClientEvent - ERROR - RTC connecting
+2024-05-26 23:56:41,862 - URBasic_realTimeClientEvent - ERROR - RTC connecting
+2024-05-26 23:56:42,867 - URBasic_realTimeClientEvent - ERROR - RTC connecting
+2024-05-26 23:56:43,874 - URBasic_realTimeClientEvent - ERROR - RTC connecting
+2024-05-26 23:56:44,880 - URBasic_realTimeClientEvent - ERROR - RTC connecting
+2024-05-26 23:56:45,884 - URBasic_realTimeClientEvent - ERROR - RTC connecting
+2024-05-26 23:56:46,892 - URBasic_realTimeClientEvent - ERROR - RTC connecting
+2024-05-26 23:56:47,900 - URBasic_realTimeClientEvent - ERROR - RTC connecting
+2024-06-05 14:13:47,342 - URBasic_realTimeClientEvent - ERROR - RTC connecting
+2024-06-05 14:13:48,353 - URBasic_realTimeClientEvent - ERROR - RTC connecting
+2024-06-05 14:13:49,368 - URBasic_realTimeClientEvent - ERROR - RTC connecting
+2024-06-05 14:13:50,380 - URBasic_realTimeClientEvent - ERROR - RTC connecting
+2024-06-05 14:13:51,389 - URBasic_realTimeClientEvent - ERROR - RTC connecting
+2024-06-05 14:13:52,404 - URBasic_realTimeClientEvent - ERROR - RTC connecting
+2024-06-05 14:13:53,419 - URBasic_realTimeClientEvent - ERROR - RTC connecting
+2024-06-05 14:13:54,432 - URBasic_realTimeClientEvent - ERROR - RTC connecting
+2024-06-05 14:13:55,445 - URBasic_realTimeClientEvent - ERROR - RTC connecting
+2024-06-05 14:13:56,459 - URBasic_realTimeClientEvent - ERROR - RTC connecting
+2024-06-05 14:13:57,462 - URBasic_realTimeClientEvent - ERROR - RTC connecting
+2024-06-05 14:13:58,470 - URBasic_realTimeClientEvent - ERROR - RTC connecting
+2024-06-05 14:13:59,483 - URBasic_realTimeClientEvent - ERROR - RTC connecting
+2024-06-05 14:14:00,498 - URBasic_realTimeClientEvent - ERROR - RTC connecting
+2024-06-05 14:14:01,506 - URBasic_realTimeClientEvent - ERROR - RTC connecting
+2024-06-05 14:14:02,518 - URBasic_realTimeClientEvent - ERROR - RTC connecting
+2024-06-05 17:05:57,288 - URBasic_dashboardEvent - ERROR - Dashboard server interface stopped running
+2024-06-05 17:05:57,290 - URBasic_rtdeEvent - ERROR - RTDE interface stopped running
+2024-06-05 17:05:59,302 - URBasic_dashboardEvent - ERROR - Dashboard connecting
+2024-06-05 17:06:01,308 - URBasic_dashboardEvent - ERROR - Dashboard connecting
+2024-06-05 17:06:03,311 - URBasic_dashboardEvent - ERROR - Dashboard connecting
+2024-06-05 17:06:05,321 - URBasic_dashboardEvent - ERROR - Dashboard connecting
+2024-06-05 17:06:07,332 - URBasic_dashboardEvent - ERROR - Dashboard connecting
+2024-06-05 17:06:09,344 - URBasic_dashboardEvent - ERROR - Dashboard connecting
+2024-06-05 17:06:11,356 - URBasic_dashboardEvent - ERROR - Dashboard connecting
+2024-06-05 17:06:13,368 - URBasic_dashboardEvent - ERROR - Dashboard connecting
+2024-06-05 17:06:15,374 - URBasic_dashboardEvent - ERROR - Dashboard connecting
+2024-06-05 17:06:57,034 - URBasic_dashboardEvent - ERROR - Dashboard server interface stopped running
+2024-06-05 17:06:59,036 - URBasic_dashboardEvent - ERROR - Dashboard connecting
+2024-06-05 17:07:01,049 - URBasic_dashboardEvent - ERROR - Dashboard connecting
+2024-06-05 17:07:03,056 - URBasic_dashboardEvent - ERROR - Dashboard connecting
+2024-06-05 17:07:05,071 - URBasic_dashboardEvent - ERROR - Dashboard connecting
+2024-06-05 17:07:07,072 - URBasic_dashboardEvent - ERROR - Dashboard connecting
+2024-06-05 17:23:53,915 - URBasic_realTimeClientEvent - ERROR - SendProgram: Safety Stop
+2024-06-05 17:24:44,054 - URBasic_realTimeClientEvent - ERROR - SendProgram: Program Stopped but not finiched!!!
+2024-06-05 17:44:09,597 - URBasic_realTimeClientEvent - ERROR - SendProgram: Program Stopped but not finiched!!!
+2024-06-05 17:57:42,439 - URBasic_realTimeClientEvent - ERROR - RTC connecting
+2024-06-05 17:57:43,445 - URBasic_realTimeClientEvent - ERROR - RTC connecting
+2024-06-05 17:57:44,455 - URBasic_realTimeClientEvent - ERROR - RTC connecting
+2024-06-05 18:02:35,906 - URBasic_realTimeClientEvent - ERROR - RTC connecting
+2024-06-05 18:02:36,910 - URBasic_realTimeClientEvent - ERROR - RTC connecting
+2024-06-05 18:02:37,919 - URBasic_realTimeClientEvent - ERROR - RTC connecting
+2024-06-05 18:04:48,305 - URBasic_dashboardEvent - ERROR - Dashboard server interface stopped running
+2024-06-05 18:04:48,306 - URBasic_rtdeEvent - ERROR - RTDE interface stopped running
+2024-06-05 18:04:50,316 - URBasic_dashboardEvent - ERROR - Dashboard connecting
+2024-06-05 18:04:52,322 - URBasic_dashboardEvent - ERROR - Dashboard connecting
+2024-06-05 18:04:54,335 - URBasic_dashboardEvent - ERROR - Dashboard connecting
+2024-06-05 18:04:56,344 - URBasic_dashboardEvent - ERROR - Dashboard connecting
+2024-06-05 18:04:58,360 - URBasic_dashboardEvent - ERROR - Dashboard connecting
+2024-06-05 18:05:00,365 - URBasic_dashboardEvent - ERROR - Dashboard connecting
+2024-06-05 18:05:02,380 - URBasic_dashboardEvent - ERROR - Dashboard connecting
+2024-06-05 18:05:04,396 - URBasic_dashboardEvent - ERROR - Dashboard connecting
+2024-06-05 18:07:11,545 - URBasic_dashboardEvent - ERROR - Dashboard server interface stopped running
+2024-06-05 18:07:13,558 - URBasic_dashboardEvent - ERROR - Dashboard connecting
+2024-06-05 18:07:15,573 - URBasic_dashboardEvent - ERROR - Dashboard connecting
+2024-06-05 18:07:17,583 - URBasic_dashboardEvent - ERROR - Dashboard connecting
+2024-06-05 18:07:19,586 - URBasic_dashboardEvent - ERROR - Dashboard connecting
+2024-06-05 18:07:21,602 - URBasic_dashboardEvent - ERROR - Dashboard connecting
+2024-06-05 18:07:23,604 - URBasic_dashboardEvent - ERROR - Dashboard connecting
+2024-06-05 18:07:25,620 - URBasic_dashboardEvent - ERROR - Dashboard connecting
+2024-06-05 18:07:27,636 - URBasic_dashboardEvent - ERROR - Dashboard connecting
+2024-06-05 18:14:42,477 - URBasic_rtdeEvent - ERROR - RTDE interface stopped running
+2024-06-05 18:14:42,479 - URBasic_dashboardEvent - ERROR - Dashboard server interface stopped running
+2024-06-05 18:14:42,899 - URBasic_realTimeClientEvent - WARNING - Could not send program!
+2024-06-05 18:14:43,911 - URBasic_realTimeClientEvent - ERROR - RTC connecting
+2024-06-05 18:14:44,483 - URBasic_dashboardEvent - ERROR - Dashboard connecting
+2024-06-05 18:14:44,918 - URBasic_realTimeClientEvent - ERROR - RTC connecting
+2024-06-05 18:14:45,932 - URBasic_realTimeClientEvent - ERROR - RTC connecting
+2024-06-05 18:14:46,489 - URBasic_dashboardEvent - ERROR - Dashboard connecting
+2024-06-05 18:14:46,938 - URBasic_realTimeClientEvent - ERROR - RTC connecting
+2024-06-05 18:14:47,941 - URBasic_realTimeClientEvent - ERROR - RTC connecting
+2024-06-05 18:14:48,496 - URBasic_dashboardEvent - ERROR - Dashboard connecting
+2024-06-05 18:14:48,945 - URBasic_realTimeClientEvent - ERROR - RTC connecting
+2024-06-05 18:14:49,953 - URBasic_realTimeClientEvent - ERROR - RTC connecting
+2024-06-05 18:14:50,511 - URBasic_dashboardEvent - ERROR - Dashboard connecting
+2024-06-05 18:14:50,959 - URBasic_realTimeClientEvent - ERROR - RTC connecting
+2024-06-05 18:14:51,964 - URBasic_realTimeClientEvent - ERROR - RTC connecting
+2024-06-05 18:14:52,520 - URBasic_dashboardEvent - ERROR - Dashboard connecting
+2024-06-05 18:14:52,968 - URBasic_realTimeClientEvent - ERROR - RTC connecting
+2024-06-05 18:14:53,973 - URBasic_realTimeClientEvent - ERROR - RTC connecting
+2024-06-05 18:14:54,527 - URBasic_dashboardEvent - ERROR - Dashboard connecting
+2024-06-05 18:14:54,978 - URBasic_realTimeClientEvent - ERROR - RTC connecting
+2024-06-05 18:14:55,981 - URBasic_realTimeClientEvent - ERROR - RTC connecting
+2024-06-05 18:14:56,538 - URBasic_dashboardEvent - ERROR - Dashboard connecting
+2024-06-05 18:14:56,988 - URBasic_realTimeClientEvent - ERROR - RTC connecting
+2024-06-05 18:14:57,991 - URBasic_realTimeClientEvent - ERROR - RTC connecting
+2024-06-05 18:19:25,463 - URBasic_rtdeEvent - ERROR - RTDE interface stopped running
+2024-06-05 18:19:25,464 - URBasic_dashboardEvent - ERROR - Dashboard server interface stopped running
+2024-06-05 18:19:27,472 - URBasic_dashboardEvent - ERROR - Dashboard connecting
+2024-06-05 18:19:29,476 - URBasic_dashboardEvent - ERROR - Dashboard connecting
+2024-06-05 18:19:31,490 - URBasic_dashboardEvent - ERROR - Dashboard connecting
+2024-06-05 18:19:33,504 - URBasic_dashboardEvent - ERROR - Dashboard connecting
+2024-06-05 18:19:35,518 - URBasic_dashboardEvent - ERROR - Dashboard connecting
+2024-06-05 18:19:37,535 - URBasic_dashboardEvent - ERROR - Dashboard connecting
+2024-06-05 18:19:39,546 - URBasic_dashboardEvent - ERROR - Dashboard connecting
+2024-06-05 18:19:41,549 - URBasic_dashboardEvent - ERROR - Dashboard connecting
+2024-06-05 18:21:28,354 - URBasic_dashboardEvent - ERROR - Dashboard server interface stopped running
+2024-06-05 18:21:30,369 - URBasic_dashboardEvent - ERROR - Dashboard connecting
+2024-06-05 18:21:32,375 - URBasic_dashboardEvent - ERROR - Dashboard connecting
+2024-06-05 18:21:34,384 - URBasic_dashboardEvent - ERROR - Dashboard connecting
+2024-06-05 18:21:36,387 - URBasic_dashboardEvent - ERROR - Dashboard connecting
+2024-06-05 18:21:38,389 - URBasic_dashboardEvent - ERROR - Dashboard connecting
+2024-06-05 18:21:40,399 - URBasic_dashboardEvent - ERROR - Dashboard connecting
+2024-06-05 18:21:42,410 - URBasic_dashboardEvent - ERROR - Dashboard connecting
+2024-06-05 18:21:44,422 - URBasic_dashboardEvent - ERROR - Dashboard connecting
+2024-06-05 18:23:43,546 - URBasic_rtdeEvent - ERROR - RTDE interface stopped running
+2024-06-05 18:23:43,548 - URBasic_dashboardEvent - ERROR - Dashboard server interface stopped running
+2024-06-05 18:23:45,550 - URBasic_dashboardEvent - ERROR - Dashboard connecting
+2024-06-05 18:23:47,561 - URBasic_dashboardEvent - ERROR - Dashboard connecting
+2024-06-05 18:23:49,571 - URBasic_dashboardEvent - ERROR - Dashboard connecting
+2024-06-05 18:23:51,586 - URBasic_dashboardEvent - ERROR - Dashboard connecting
+2024-06-05 18:23:53,598 - URBasic_dashboardEvent - ERROR - Dashboard connecting
+2024-06-05 18:23:55,611 - URBasic_dashboardEvent - ERROR - Dashboard connecting
+2024-06-05 18:23:57,619 - URBasic_dashboardEvent - ERROR - Dashboard connecting
+2024-06-05 18:23:59,628 - URBasic_dashboardEvent - ERROR - Dashboard connecting
+2024-06-05 18:25:46,524 - URBasic_dashboardEvent - ERROR - Dashboard server interface stopped running
+2024-06-05 18:25:46,526 - URBasic_rtdeEvent - ERROR - RTDE interface stopped running
+2024-06-05 18:25:48,548 - URBasic_dashboardEvent - ERROR - Dashboard connecting
+2024-06-05 18:25:50,572 - URBasic_dashboardEvent - ERROR - Dashboard connecting
+2024-06-05 18:25:52,598 - URBasic_dashboardEvent - ERROR - Dashboard connecting
+2024-06-05 18:25:54,624 - URBasic_dashboardEvent - ERROR - Dashboard connecting
+2024-06-05 18:25:56,650 - URBasic_dashboardEvent - ERROR - Dashboard connecting
+2024-06-05 18:25:58,672 - URBasic_dashboardEvent - ERROR - Dashboard connecting
+2024-06-05 18:26:19,766 - URBasic_realTimeClientEvent - ERROR - SendProgram: Program Stopped but not finiched!!!
+2024-07-24 16:31:27,117 - URBasic_realTimeClientEvent - ERROR - sendProgram: Program not able to run
+2024-07-24 16:31:27,846 - URBasic_realTimeClientEvent - ERROR - sendProgram: Program not able to run
+2024-07-24 16:33:05,654 - URBasic_realTimeClientEvent - ERROR - sendProgram: Program not able to run
+2024-07-24 16:33:14,207 - URBasic_rtdeEvent - ERROR - Lost some RTDE at 759.7199999999999 - 9.999999999990905 milliseconds since last package
+2024-07-24 16:33:14,740 - URBasic_realTimeClientEvent - ERROR - SendProgram: Program Stopped but not finiched!!!
+2024-07-24 16:41:51,740 - URBasic_realTimeClientEvent - ERROR - RTC connecting
+2024-07-24 16:41:52,753 - URBasic_realTimeClientEvent - ERROR - RTC connecting
+2024-07-24 16:41:53,758 - URBasic_realTimeClientEvent - ERROR - RTC connecting
+2024-07-24 16:41:54,760 - URBasic_realTimeClientEvent - ERROR - RTC connecting
+2024-07-24 16:41:55,771 - URBasic_realTimeClientEvent - ERROR - RTC connecting
+2024-07-24 16:41:56,777 - URBasic_realTimeClientEvent - ERROR - RTC connecting
+2024-07-24 16:41:57,787 - URBasic_realTimeClientEvent - ERROR - RTC connecting
+2024-07-24 16:41:58,794 - URBasic_realTimeClientEvent - ERROR - RTC connecting
+2024-07-24 16:41:59,794 - URBasic_realTimeClientEvent - ERROR - RTC connecting
+2024-07-24 16:42:00,805 - URBasic_realTimeClientEvent - ERROR - RTC connecting
+2024-07-24 16:42:01,810 - URBasic_realTimeClientEvent - ERROR - RTC connecting
+2024-07-24 16:42:02,824 - URBasic_realTimeClientEvent - ERROR - RTC connecting
+2024-07-24 16:42:03,836 - URBasic_realTimeClientEvent - ERROR - RTC connecting
+2024-07-24 16:42:04,844 - URBasic_realTimeClientEvent - ERROR - RTC connecting
+2024-07-24 16:42:05,854 - URBasic_realTimeClientEvent - ERROR - RTC connecting
+2024-07-24 16:42:06,860 - URBasic_realTimeClientEvent - ERROR - RTC connecting
+2024-07-24 16:42:07,870 - URBasic_realTimeClientEvent - ERROR - RTC connecting
+2024-07-24 16:42:08,876 - URBasic_realTimeClientEvent - ERROR - RTC connecting
+2024-07-24 16:42:09,878 - URBasic_realTimeClientEvent - ERROR - RTC connecting
+2024-07-24 16:42:10,885 - URBasic_realTimeClientEvent - ERROR - RTC connecting
+2024-07-24 16:42:11,892 - URBasic_realTimeClientEvent - ERROR - RTC connecting
+2024-07-24 16:42:12,895 - URBasic_realTimeClientEvent - ERROR - RTC connecting
+2024-07-24 16:42:13,903 - URBasic_realTimeClientEvent - ERROR - RTC connecting
+2024-07-24 16:42:14,908 - URBasic_realTimeClientEvent - ERROR - RTC connecting
+2024-07-24 16:42:15,916 - URBasic_realTimeClientEvent - ERROR - RTC connecting
+2024-07-24 16:42:16,920 - URBasic_realTimeClientEvent - ERROR - RTC connecting
+2024-07-24 16:42:17,929 - URBasic_realTimeClientEvent - ERROR - RTC connecting
+2024-07-24 16:42:18,946 - URBasic_realTimeClientEvent - ERROR - RTC connecting
+2024-07-24 16:42:19,956 - URBasic_realTimeClientEvent - ERROR - RTC connecting
+2024-07-24 16:42:20,963 - URBasic_realTimeClientEvent - ERROR - RTC connecting
+2024-07-24 16:42:21,963 - URBasic_realTimeClientEvent - ERROR - RTC connecting
+2024-07-24 16:42:22,971 - URBasic_realTimeClientEvent - ERROR - RTC connecting
+2024-07-24 16:42:23,980 - URBasic_realTimeClientEvent - ERROR - RTC connecting
+2024-07-24 16:42:24,991 - URBasic_realTimeClientEvent - ERROR - RTC connecting
+2024-07-24 16:42:25,996 - URBasic_realTimeClientEvent - ERROR - RTC connecting
+2024-07-24 16:42:26,997 - URBasic_realTimeClientEvent - ERROR - RTC connecting
+2024-07-24 16:42:28,006 - URBasic_realTimeClientEvent - ERROR - RTC connecting
+2024-07-24 16:42:29,014 - URBasic_realTimeClientEvent - ERROR - RTC connecting
+2024-07-24 16:42:30,023 - URBasic_realTimeClientEvent - ERROR - RTC connecting
+2024-07-24 16:42:31,032 - URBasic_realTimeClientEvent - ERROR - RTC connecting
+2024-07-24 16:42:32,041 - URBasic_realTimeClientEvent - ERROR - RTC connecting
+2024-07-24 16:42:33,047 - URBasic_realTimeClientEvent - ERROR - RTC connecting
+2024-07-24 16:42:34,050 - URBasic_realTimeClientEvent - ERROR - RTC connecting
+2024-07-24 16:42:35,061 - URBasic_realTimeClientEvent - ERROR - RTC connecting
+2024-07-24 16:42:36,064 - URBasic_realTimeClientEvent - ERROR - RTC connecting
+2024-07-24 16:42:37,074 - URBasic_realTimeClientEvent - ERROR - RTC connecting
+2024-07-24 16:42:38,077 - URBasic_realTimeClientEvent - ERROR - RTC connecting
+2024-07-24 16:42:39,080 - URBasic_realTimeClientEvent - ERROR - RTC connecting
+2024-07-24 16:42:40,092 - URBasic_realTimeClientEvent - ERROR - RTC connecting
+2024-07-24 16:42:41,094 - URBasic_realTimeClientEvent - ERROR - RTC connecting
+2024-07-24 16:42:42,105 - URBasic_realTimeClientEvent - ERROR - RTC connecting
+2024-07-24 16:42:43,106 - URBasic_realTimeClientEvent - ERROR - RTC connecting
+2024-07-24 16:42:44,111 - URBasic_realTimeClientEvent - ERROR - RTC connecting
+2024-07-24 16:42:45,115 - URBasic_realTimeClientEvent - ERROR - RTC connecting
+2024-07-24 16:42:46,116 - URBasic_realTimeClientEvent - ERROR - RTC connecting
+2024-07-24 16:42:47,125 - URBasic_realTimeClientEvent - ERROR - RTC connecting
+2024-07-24 16:42:48,127 - URBasic_realTimeClientEvent - ERROR - RTC connecting
+2024-07-24 16:42:49,132 - URBasic_realTimeClientEvent - ERROR - RTC connecting
+2024-07-24 16:42:50,144 - URBasic_realTimeClientEvent - ERROR - RTC connecting
+2024-07-24 16:42:51,159 - URBasic_realTimeClientEvent - ERROR - RTC connecting
+2024-07-24 16:42:53,186 - URBasic_dashboardEvent - ERROR - Dashboard connecting
+2024-07-24 16:42:55,194 - URBasic_dashboardEvent - ERROR - Dashboard connecting
+2024-07-24 16:42:57,198 - URBasic_dashboardEvent - ERROR - Dashboard connecting
+2024-07-24 16:42:59,200 - URBasic_dashboardEvent - ERROR - Dashboard connecting
+2024-07-24 16:50:42,791 - URBasic_rtdeEvent - ERROR - Lost some RTDE at 728.732 - 104.00000000004184 milliseconds since last package
+2024-07-24 16:55:21,228 - URBasic_realTimeClientEvent - ERROR - Program re-sending timed out - Could not send program!
+2024-07-24 16:58:00,877 - URBasic_realTimeClientEvent - ERROR - Program re-sending timed out - Could not send program!
