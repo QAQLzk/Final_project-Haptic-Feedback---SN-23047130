@@ -4,16 +4,6 @@
 This program is mainly used to implement interaction and haptic feedback between the Novint Falcon haptic device and the robotic arm. It is done by adding a soft Hall effect based force sensor to the robotic arm, thus transmitting the force sensed from the sensor to the haptic device (Z-axis only). 
 The detailed information about the parameters of the haptic device can be obtained from this website: https://delfthapticslab.nl/device/novint-falcon/
 
-## Directory Structure
-
-Haptic Development
-├── data_collection_2(Z)
-├── final_test1
-├── i2c_hallsensor
-├── URBasic
-├── README.md
-└── requirements.txt
-
 ## Library needed
 The program is based on python 3.11 and is written on Visual Studio 2019. The following libraries are required in this program:
 - pyserial
@@ -21,6 +11,7 @@ The program is based on python 3.11 and is written on Visual Studio 2019. The fo
 - math3d
 - keyboard
 
+Also `requirement.txt` file has provided.
 
 ## Arduino programe
 The program of arduino is `adafruit_i2c.ino` which is placed in the `i2c_hallsensor` Folder. Please verify and upload to arduino board first.
