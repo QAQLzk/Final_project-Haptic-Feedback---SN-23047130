@@ -14,11 +14,15 @@ The program is based on python 3.11 and is written on Visual Studio 2019. The fo
 Also `requirement.txt` file has provided.
 
 ## Arduino programe
-The program of arduino is `adafruit_i2c.ino` which is placed in the `i2c_hallsensor` Folder. Please verify and upload to arduino board first.
+This project used Adafruit MLX90393 3-axis hall sensor and Arduino Nano to make a soft magnetic force sensor. The sensor detects the position of the magnet on the silicone. When force is applied to this sensor, the silicone deforms, which brings the magnet closer to the sensor with changes in the magnetic field. The program of arduino is `adafruit_i2c.ino` which is placed in the `i2c_hallsensor` Folder. Please verify and upload to arduino board first. The Gain was set 2x in this case.
 
 ## Machine Learning Part
-All the dataset which are original and processed have place in the `data_collection_2(Z)` Folder. The jupyter notebook files `Z_test.ipynb` shows the result of MLP and Linear model. And `Cross_validation.ipynb` shows the cross validation result. The best MLP model in the training has saved as `Z_best_model.h5`.
+All the dataset which are original and processed have place in the `data_collection_2(Z)` Folder. The jupyter notebook files `Z_test.ipynb` shows the result of MLP and Linear model. And `Cross_validation.ipynb` shows the cross validation result. The best MLP model in the training has saved as `Z_best_model.h5`. More information about the files can be found in the readme file in the Folder.
 
+The result of the machine learning section compares the performance of MLP and linear regression on this sensor. By comparing the MAE, it is proved that MLP performs better than linear regression for this task. The results are shown in the figure below.
+![MAE result](image.png)
+
+![MLP and Linear Difference](image-1.png)
 ## How to run
 First, connect the robotic arm, the haptic device, and the pressure sensor interface to the computer. Then, for the haptic device, you need to download its driver (SDK), which can be downloaded from Force Dimension's official website: https://www.forcedimension.com/software/sdk. 
 
