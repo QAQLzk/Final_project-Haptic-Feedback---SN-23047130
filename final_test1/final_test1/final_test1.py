@@ -131,13 +131,13 @@ if drd_dll.drdOpen() < 0:
     exit(-1)
 
 # Check if the device is compatible with the robotics library (DRD)
-if not drd_dll.drdIsSupported():
-    device_name = dhd_dll.dhdGetSystemName().decode('utf-8')
-    print(f"unsupported device type {device_name}")
-    print("exiting...")
-    time.c(2.0)
-    drd_dll.drdClose()
-    sys.exit(-1)
+#if not drd_dll.drdIsSupported():
+#    device_name = dhd_dll.dhdGetSystemName().decode('utf-8')
+#    print(f"unsupported device type {device_name}")
+#    print("exiting...")
+#    time.c(2.0)
+#    drd_dll.drdClose()
+#    sys.exit(-1)
 
 
 print("haptic initialization successful")
@@ -246,8 +246,8 @@ def read_serial_data():
                     latest_serial_data = [x, y, z]  
                 new_data_event.set() 
 
-                read_time = time.time()  
-                print(f"Time: {read_time:.6f}, Magnetic Field: X={x:.3f}, Y={y:.3f}, Z={z:.3f}")
+                #read_time = time.time()  
+                #print(f"Time: {read_time:.6f}, Magnetic Field: X={x:.3f}, Y={y:.3f}, Z={z:.3f}")
         except Exception as e:
             print(f"ERROR: {e}")
 
@@ -269,8 +269,8 @@ def prediction_thread():
 
                 Z_force = Z_predicted_force[0] * 0.0098
 
-                pred_end_time = time.time() 
-                print(f"Time: {pred_end_time:.6f}, Z_force Predicted: {Z_force:.6f}")
+                #pred_end_time = time.time() 
+                #print(f"Time: {pred_end_time:.6f}, Z_force Predicted: {Z_force:.6f}")
 
 
 
@@ -345,8 +345,8 @@ def moveto_center():
 
     if drd_dll.drdStop(True) < 0:  # True is passed to indicate a forceful stop
         print(f"error: failed to stop robotic regulation ()")
-        time.sleep(2.0)  # Sleep for 2 seconds
-        sys.exit(-1)  # Exit the program with an error code
+        time.sleep(2.0)  
+        sys.exit(-1)  
 
 moveto_center()
 
@@ -381,12 +381,12 @@ try:
             haptic_input = buffer.popleft()
 
 
-            ## Display current position
-            #current_time = time.time()
-            #if current_time - lastDisplayUpdateTime > 0.1:
-            #    lastDisplayUpdateTime = current_time
-            #    sys.stdout.write(f"\r Scale: {scale:.2f},Robot Max Range:{robot_max_range['x']:.3f} | Haptic Position: ({haptic_input[0]:6.3f} {haptic_input[1]:6.3f} {haptic_input[2]:6.3f}) ")
-            #    sys.stdout.flush()
+            # Display current position
+            current_time = time.time()
+            if current_time - lastDisplayUpdateTime > 0.1:
+                lastDisplayUpdateTime = current_time
+                sys.stdout.write(f"\r Scale: {scale:.2f},Robot Max Range:{robot_max_range['x']:.3f} | Haptic Position: ({haptic_input[0]:6.3f} {haptic_input[1]:6.3f} {haptic_input[2]:6.3f}) ")
+                sys.stdout.flush()
 
 
             dz = (haptic_input[0] / haptic_max_range['x']) * robot_max_range['x']
@@ -435,7 +435,7 @@ try:
         drd_dll.drdSetForceAndTorqueAndGripperForce(fx, fy, fz, tx, ty, tz, 0.0, ctypes.c_char(b'\xff') )
 
 
-        apply_force_time = time.time() 
+        #apply_force_time = time.time() 
         #print(f"Time: {apply_force_time:.6f}, Applied Forces: fx={fx:.3f}, fy={fy:.3f}, fz={fz:.3f}")
 
 
