@@ -11,16 +11,35 @@ import serial
 import threading
 from keras.models import load_model
 import os
+import joblib
+import numpy as np
+import tensorflow as tf
+import tensorflow.lite as tflite
 
-# The path of the model
-file_path = os.path.join(os.path.dirname(__file__), '../../data collection_2 (Z)/Test/Z_best_model.h5')
-
-# Check if the file exists
+# Load model
+# Linear
+file_path = os.path.join(os.path.dirname(__file__), '../../data collection_2 (Z)/Test/linear_regression_model.pkl')
 if os.path.exists(file_path):
-    model = load_model(file_path)
+    model = joblib.load(file_path)
 else:
-    print("File not found.")
+    raise FileNotFoundError("Model file not found.")
 
+
+#MLP
+# Ensure GPU is used if available
+#physical_devices = tf.config.list_physical_devices('GPU')
+#if physical_devices:
+#    try:
+#        tf.config.experimental.set_memory_growth(physical_devices[0], True)
+#    except:
+#        pass
+
+#file_path = os.path.join(os.path.dirname(__file__), '../../data collection_2 (Z)/Test/Z_best_model.h5')
+
+#if os.path.exists(file_path):
+#    model = load_model(file_path)
+#else:
+#    raise FileNotFoundError("Model file not found.")
 
 
 CONTROL_FREQUENCY = 125  # Robotic arm (Hz)
@@ -116,7 +135,7 @@ if not drd_dll.drdIsSupported():
     device_name = dhd_dll.dhdGetSystemName().decode('utf-8')
     print(f"unsupported device type {device_name}")
     print("exiting...")
-    time.sleep(2.0)
+    time.c(2.0)
     drd_dll.drdClose()
     sys.exit(-1)
 
@@ -204,14 +223,12 @@ def decrease_scale():
 
 latest_serial_data = None
 data_lock = threading.Lock()
-
-
-serial_port = 'COM8'
-baud_rate = 115200
-
+new_data_event = threading.Event()
 Z_force = 0
 
-# Serial Connection
+# Serial setup
+serial_port = 'COM3'
+baud_rate = 115200
 ser = serial.Serial(serial_port, baud_rate, timeout=0.1)
 
 def read_serial_data():
@@ -226,32 +243,87 @@ def read_serial_data():
                 y = float(parts[3])
                 z = float(parts[5])
                 with data_lock:
-                    latest_serial_data = [x, y, z]
+                    latest_serial_data = [x, y, z]  
+                new_data_event.set() 
+
+                read_time = time.time()  
+                print(f"Time: {read_time:.6f}, Magnetic Field: X={x:.3f}, Y={y:.3f}, Z={z:.3f}")
         except Exception as e:
             print(f"ERROR: {e}")
-        time.sleep(0.001)
 
 
 
+
+# prediction thread
+#Linear:
+def prediction_thread():
+    global Z_force
+    while True:
+        
+        new_data_event.wait(timeout =0.1)
+        with data_lock:
+            if latest_serial_data:
+                z = latest_serial_data[2]
+                input_data = [[z]]
+                Z_predicted_force = model.predict(input_data)
+
+                Z_force = Z_predicted_force[0] * 0.0098
+
+                pred_end_time = time.time() 
+                print(f"Time: {pred_end_time:.6f}, Z_force Predicted: {Z_force:.6f}")
+
+
+
+        new_data_event.clear()
+        # time.sleep(0.01) 
+
+
+
+#MLP
+# Convert model to TensorFlow Lite
+#converter = tflite.TFLiteConverter.from_keras_model(model)
+#tflite_model = converter.convert()
+
+## Save the model
+#tflite_model_path = 'model.tflite'
+#with open(tflite_model_path, 'wb') as f:
+#    f.write(tflite_model)
+
+## Load TFLite model and allocate tensors
+#interpreter = tflite.Interpreter(model_path=tflite_model_path)
+#interpreter.allocate_tensors()
+
+## Get input and output tensors
+#input_details = interpreter.get_input_details()
+#output_details = interpreter.get_output_details()
+
+#def prediction_thread():
+#    global Z_force
+#    while True:
+#        start_time = time.perf_counter()
+#        new_data_event.wait()
+#        with data_lock:
+#            if latest_serial_data:
+#                z = latest_serial_data[2]
+#                input_data = np.array([[z]], dtype=np.float32)
+#                interpreter.set_tensor(input_details[0]['index'], input_data)
+#                interpreter.invoke()
+#                Z_predicted_force = interpreter.get_tensor(output_details[0]['index'])
+#                Z_force = Z_predicted_force[0][0] * 0.0098 * 1.3
+
+#                print(f"Z_force: {Z_force}")
+        
+#        pred_end_time = time.perf_counter()
+#        prediction_time = pred_end_time - start_time
+#        print(f"Time from read to prediction: {prediction_time:.6f} seconds")
+#        new_data_event.clear()
+#        time.sleep(0.01)
     
 
 ####################################################
 # Move to the center of Workspace
 
 def moveto_center():
-
-    #if drd_dll.drdRegulatePos(True) < 0:
-    #    print("Error: failed to set base regulation")
-    #    return -1
-
-    #if drd_dll.drdRegulateRot(True) < 0:
-    #    print("Error: failed to set wrist regulation")
-    #    return -1
-
-    #if drd_dll.drdRegulateGrip(True) < 0:
-    #    print("Error: failed to set gripper regulation")
-    #    return -1
-
 
     if not drd_dll.drdIsInitialized() and drd_dll.drdAutoInit() < 0:
         print("error: failed to initialize device")
@@ -277,15 +349,25 @@ def moveto_center():
 
 moveto_center()
 
+last_protection_time = time.time()
+protection_interval = 0.5
+
 moving = True
+Protect = False
+protect_haptic_x = 0.055
 
 try: 
     
-    haptic_thread = threading.Thread(target=haptic_input_thread)
+    haptic_thread = threading.Thread(target=haptic_input_thread,daemon = True)
     haptic_thread.start()
 
-    serial_thread = threading.Thread(target=read_serial_data)
+    serial_thread = threading.Thread(target=read_serial_data, daemon=True)
     serial_thread.start()
+
+    predict_thread = threading.Thread(target=prediction_thread, daemon=True)
+    predict_thread.start()
+
+
 
     # Main loop
     while running:
@@ -296,28 +378,12 @@ try:
             haptic_input = buffer.popleft()
 
 
-            with data_lock:
-                serial_data = latest_serial_data
-            if serial_data:
-                x, y, z = serial_data
-                
-                # Prediction
-                input_data = [[z]]  
-                Z_predicted_force = model.predict(input_data)
-
-                Z_force = Z_predicted_force[0][0] * 0.0098*0.5
-                
-
-
-
-
-
-            # Display current position
-            current_time = time.time()
-            if current_time - lastDisplayUpdateTime > 0.1:
-                lastDisplayUpdateTime = current_time
-                sys.stdout.write(f"\r Scale: {scale:.2f},Robot Max Range:{robot_max_range['x']:.3f} | Haptic Position: ({haptic_input[0]:6.3f} {haptic_input[1]:6.3f} {haptic_input[2]:6.3f} ")
-                sys.stdout.flush()
+            ## Display current position
+            #current_time = time.time()
+            #if current_time - lastDisplayUpdateTime > 0.1:
+            #    lastDisplayUpdateTime = current_time
+            #    sys.stdout.write(f"\r Scale: {scale:.2f},Robot Max Range:{robot_max_range['x']:.3f} | Haptic Position: ({haptic_input[0]:6.3f} {haptic_input[1]:6.3f} {haptic_input[2]:6.3f}) ")
+            #    sys.stdout.flush()
 
 
             dz = (haptic_input[0] / haptic_max_range['x']) * robot_max_range['x']
@@ -328,11 +394,23 @@ try:
                 current_position[1] + dy,
                 current_position[2] + dz
             ]
+
+            
+            # Protect setting 
+            #with data_lock:
+            #    if Z_force > 7 and not Protect and (current_time - last_protection_time > protection_interval):
+            #        Protect = True
+            #        protect_haptic_x = haptic_input[0]
+            #        last_protection_time = current_time
+            #        print("Protect triggered! Move backward")
+            #    elif Protect and haptic_input[0] > protect_haptic_x:
+            #        Protect = False
+            #        print("Protection cleared")
         
             new_pose = new_position + list(current_orientation)
 
              #Move to real time position
-            if moving:
+            if moving== True:
                 robot.set_realtime_pose(new_pose)
 
 
@@ -341,10 +419,6 @@ try:
         vel_result = drd_dll.drdGetVelocity(ctypes.byref(vx), ctypes.byref(vy), ctypes.byref(vz),
                                     ctypes.byref(wx), ctypes.byref(wy), ctypes.byref(wz),
                                     ctypes.byref(vg), ctypes.c_char(b'\xff') )
-        if vel_result < 0:
-            print("Failed to get velocity")
-            time.sleep(2)
-            break
 
         # Calculate forces
         fx = -damping_coefficient_translation * vx.value + Z_force
@@ -356,6 +430,10 @@ try:
 
         # Apply the forces
         drd_dll.drdSetForceAndTorqueAndGripperForce(fx, fy, fz, tx, ty, tz, 0.0, ctypes.c_char(b'\xff') )
+
+
+        apply_force_time = time.time() 
+        print(f"Time: {apply_force_time:.6f}, Applied Forces: fx={fx:.3f}, fy={fy:.3f}, fz={fz:.3f}")
 
 
         if keyboard.is_pressed('x'):
@@ -370,7 +448,7 @@ try:
             moveto_center()
             current_pose = robot.get_actual_tcp_pose()  
             current_position = current_pose[:3]  
-            time.sleep(0.1)
+            time.sleep(0.5)
             moving = True
 
         if keyboard.is_pressed('r'):
@@ -388,12 +466,19 @@ try:
 
             # Report success
             print("Haptic Connection Closed")
+            #robot_initialposition = (math.radians(0),
+            #                math.radians(-115),
+            #                math.radians(120),
+            #                math.radians(-180),
+            #                math.radians(-88),
+            #                math.radians(0))
             robot_initialposition = (math.radians(0),
-                            math.radians(-115),
-                            math.radians(120),
-                            math.radians(-180),
-                            math.radians(-88),
+                            math.radians(-90),
+                            math.radians(90),
+                            math.radians(-90),
+                            math.radians(-90),
                             math.radians(0))
+
 
             
             robot.movej(q=robot_initialposition, a= 0.7, v= 0.8 )
@@ -419,6 +504,8 @@ except Exception as e:
 
     # Report success
     print("Haptic Connection Closed")
+
+
     robot_initialposition = (math.radians(0),
                     math.radians(-115),
                     math.radians(120),

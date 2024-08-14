@@ -5,7 +5,7 @@ Adafruit_MLX90393 sensor = Adafruit_MLX90393();
 #define MLX90393_CS 10
 
 float ini_x, ini_y, ini_z;
-long interval = 100; 
+long interval = 10; 
 long previousMillis = 0; 
 
 void setup(void)
@@ -47,10 +47,10 @@ void setup(void)
   sensor.setResolution(MLX90393_Z, MLX90393_RES_16);
 
   // Set oversampling
-  sensor.setOversampling(MLX90393_OSR_3);
+  sensor.setOversampling(MLX90393_OSR_0);
 
   // Set digital filtering
-  sensor.setFilter(MLX90393_FILTER_5);
+  sensor.setFilter(MLX90393_FILTER_2);
 
   sensor.readData(&ini_x, &ini_y, &ini_z);
 
@@ -69,9 +69,9 @@ void loop(void) {
       x = x-ini_x;
       y = y-ini_y;
       z = z- ini_z;
-        Serial.print("X: "); Serial.print(x, 4); Serial.print(" uT");
-        Serial.print(" \Y: "); Serial.print(y, 4); Serial.print(" uT");
-        Serial.print(" \Z: "); Serial.print(z, 4); Serial.println(" uT");
+      Serial.print("X: "); Serial.print(x, 4); Serial.print(" uT");
+      Serial.print(" \Y: "); Serial.print(y, 4); Serial.print(" uT");
+      Serial.print(" \Z: "); Serial.print(z, 4); Serial.println(" uT");
     } else {
         Serial.println("Unable to read XYZ data from the sensor.");
     }
