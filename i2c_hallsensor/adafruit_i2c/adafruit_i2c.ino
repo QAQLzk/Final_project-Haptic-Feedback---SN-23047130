@@ -5,7 +5,7 @@ Adafruit_MLX90393 sensor = Adafruit_MLX90393();
 #define MLX90393_CS 10
 
 float ini_x, ini_y, ini_z;
-long interval = 10; 
+long interval = 100; 
 long previousMillis = 0; 
 
 void setup(void)
@@ -46,8 +46,8 @@ void setup(void)
   sensor.setResolution(MLX90393_Y, MLX90393_RES_17);
   sensor.setResolution(MLX90393_Z, MLX90393_RES_16);
 
-  // Set oversampling
-  sensor.setOversampling(MLX90393_OSR_0);
+  // Set sample rate
+  sensor.setOversampling(MLX90393_OSR_3);
 
   // Set digital filtering
   sensor.setFilter(MLX90393_FILTER_2);

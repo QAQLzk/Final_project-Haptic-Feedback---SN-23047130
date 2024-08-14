@@ -321,8 +321,9 @@ def prediction_thread():
     
 
 ####################################################
-# Move to the center of Workspace
 
+
+# Move to the center of Workspace
 def moveto_center():
 
     if not drd_dll.drdIsInitialized() and drd_dll.drdAutoInit() < 0:
@@ -355,7 +356,8 @@ protection_interval = 0.5
 moving = True
 Protect = False
 protect_haptic_x = 0.055
-
+##############################################
+# Main Loop
 try: 
     
     haptic_thread = threading.Thread(target=haptic_input_thread,daemon = True)
@@ -366,6 +368,7 @@ try:
 
     predict_thread = threading.Thread(target=prediction_thread, daemon=True)
     predict_thread.start()
+
 
 
 
@@ -433,7 +436,7 @@ try:
 
 
         apply_force_time = time.time() 
-        print(f"Time: {apply_force_time:.6f}, Applied Forces: fx={fx:.3f}, fy={fy:.3f}, fz={fz:.3f}")
+        #print(f"Time: {apply_force_time:.6f}, Applied Forces: fx={fx:.3f}, fy={fy:.3f}, fz={fz:.3f}")
 
 
         if keyboard.is_pressed('x'):
@@ -466,12 +469,7 @@ try:
 
             # Report success
             print("Haptic Connection Closed")
-            #robot_initialposition = (math.radians(0),
-            #                math.radians(-115),
-            #                math.radians(120),
-            #                math.radians(-180),
-            #                math.radians(-88),
-            #                math.radians(0))
+
             robot_initialposition = (math.radians(0),
                             math.radians(-90),
                             math.radians(90),
