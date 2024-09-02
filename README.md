@@ -20,7 +20,7 @@ This project used Adafruit MLX90393 3-axis hall sensor and Arduino Nano to make 
 All the dataset which are original and processed have place in the `data_collection_2(Z)` Folder. The jupyter notebook files `Z_test.ipynb` shows the result of MLP and Linear model. And `Cross_validation.ipynb` shows the cross validation result. The best MLP model in the training has saved as `Z_best_model.h5`. More information about the files can be found in the readme file in the Folder.
 
 The result of the machine learning section compares the performance of MLP and linear regression on this sensor. By comparing the MAE, it is proved that MLP performs better than linear regression for this task. The results are shown in the figure below.
-![alt text](image.png)
+![alt text](image-2.png)
 
 ![MLP and Linear Difference](image-1.png)
 ## How to run
