@@ -3,7 +3,7 @@
 ## Introduction
 This program is mainly used to implement interaction and haptic feedback between the Novint Falcon haptic device and the robotic arm. It is done by adding a soft Hall effect based force sensor to the robotic arm, thus transmitting the force sensed from the sensor to the haptic device (Z-axis only). 
 The detailed information about the parameters of the haptic device can be obtained from this website: https://delfthapticslab.nl/device/novint-falcon/
-
+![alt text](image.png)
 ## Library needed
 The program is based on python 3.11 and is written on Visual Studio 2019. The following libraries are required in this program:
 - pyserial
