@@ -22,7 +22,8 @@ All the dataset which are original and processed have place in the `data_collect
 The result of the machine learning section compares the performance of MLP and linear regression on this sensor. By comparing the MAE, it is proved that MLP performs better than linear regression for this task. The results are shown in the figure below.
 ![alt text](image-2.png)
 
-![MLP and Linear Difference](image-1.png)
+![alt text](image-3.png)
+
 ## How to run
 First, connect the robotic arm, the haptic device, and the pressure sensor interface to the computer. Then, for the haptic device, you need to download its driver (SDK), which can be downloaded from Force Dimension's official website: https://www.forcedimension.com/software/sdk. 
 
@@ -43,3 +44,5 @@ The program has implemented real-time control between the haptic device and the 
 ### Note
 Additionally, to improve the user experience, damping forces were added to the haptic, which can be adjusted by modifying the variables `damping_coefficient_translation` and `damping_coefficient_ rotation` to make adjustments.
 At the same time, the size of the force feedback function can be modified by adjusting the specific coefficient in the variable `Z_force` (currently 0.5)
+
+![alt text](image-4.png)
